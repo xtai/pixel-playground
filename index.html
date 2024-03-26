@@ -100,7 +100,7 @@
               <input type="text" id="temp_pixel_ID" class="form-control" placeholder="Pixel or Dataset ID" />
               <a
                 class="btn btn-secondary"
-                onclick="fbq('init', document.getElementById('temp_pixel_ID').value);fbq('track', 'PageView');"
+                onclick="fbq('init', document.getElementById('temp_pixel_ID').value);fbq('track', 'PageView');cbq('init', document.getElementById('temp_pixel_ID').value);cbq('track', 'PageView');"
                 >Add</a
               >
             </div>
@@ -111,28 +111,28 @@
         <p class="mb-2">Standard Events</p>
         <div class="row g-2 mb-3 align-items-center">
           <div class="col-auto">
-            <a class="btn btn-secondary" onclick="fbq('track', 'AddToCart');">AddToCart</a>
+            <a class="btn btn-secondary" onclick="fbq('track', 'AddToCart');cbq('track', 'AddToCart');">AddToCart</a>
           </div>
           <div class="col-auto">
-            <a class="btn btn-secondary" onclick="fbq('track', 'AddToWishlist');">AddToWishlist</a>
+            <a class="btn btn-secondary" onclick="fbq('track', 'AddToWishlist');cbq('track', 'AddToWishlist');">AddToWishlist</a>
           </div>
           <div class="col-auto">
-            <a class="btn btn-secondary" onclick="fbq('track', 'InitiateCheckout');">InitiateCheckout</a>
+            <a class="btn btn-secondary" onclick="fbq('track', 'InitiateCheckout');cbq('track', 'InitiateCheckout');">InitiateCheckout</a>
           </div>
           <div class="col-auto">
-            <a class="btn btn-secondary" onclick="fbq('track', 'ViewContent');">ViewContent</a>
+            <a class="btn btn-secondary" onclick="fbq('track', 'ViewContent');cbq('track', 'ViewContent');">ViewContent</a>
           </div>
           <div class="col-auto">
             <a
               class="btn btn-secondary"
-              onclick="fbq('track', 'Purchase', {currency: 'USD', value: (Math.random() * 100).toFixed(2)});"
+              onclick="fbq('track', 'Purchase', {currency: 'USD', value: (Math.random() * 100).toFixed(2)});cbq('track', 'Purchase', {currency: 'USD', value: (Math.random() * 100).toFixed(2)});"
               >Purchase</a
             >
           </div>
           <div class="col-auto">
             <a
               class="btn btn-secondary"
-              onclick="fbq('track', 'Subscribe', {currency: 'USD', value: (Math.random() * 100).toFixed(2)});"
+              onclick="fbq('track', 'Subscribe', {currency: 'USD', value: (Math.random() * 100).toFixed(2)});cbq('track', 'Subscribe', {currency: 'USD', value: (Math.random() * 100).toFixed(2)});"
               >Subscribe</a
             >
           </div>
@@ -140,12 +140,12 @@
         <p class="mb-2">Custom Events</p>
         <div class="row g-2 mb-3 align-items-center">
           <div class="col-auto">
-            <a class="btn btn-secondary" onclick="fbq('track', 'Ping Zucc');">Ping Zucc</a>
+            <a class="btn btn-secondary" onclick="fbq('track', 'Ping Zucc');cbq('track', 'Ping Zucc');">Ping Zucc</a>
           </div>
           <div class="col-auto">
             <a
               class="btn btn-secondary"
-              onclick="fbq('track', 'Redefined', {currency: 'USD', value: (Math.random() * 100).toFixed(2)});"
+              onclick="fbq('track', 'Redefined', {currency: 'USD', value: (Math.random() * 100).toFixed(2)});cbq('track', 'Redefined', {currency: 'USD', value: (Math.random() * 100).toFixed(2)});"
               >Redefined</a
             >
           </div>
@@ -157,7 +157,7 @@
                 class="form-control"
                 placeholder="Custom Events"
                 value="Impacc" />
-              <a class="btn btn-secondary" onclick="fbq('track', document.getElementById('custom_event_name').value);"
+              <a class="btn btn-secondary" onclick="fbq('track', document.getElementById('custom_event_name').value);cbq('track', document.getElementById('custom_event_name').value);"
                 >Send Custom Event</a
               >
             </div>
